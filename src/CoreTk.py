@@ -7,6 +7,12 @@ class Gpeg(Tk):
 
         super().__init__();
         self.path = path;
+        self.setscreen_width = super().winfo_screenwidth()
+        self.setscreen_height = super().winfo_screenheight()
+
+        self.size_wind_x = int(self.setscreen_width / 4 - 25);
+        self.size_wind_y = int(self.setscreen_height / 9);
+
         print("\033[032mDefault params: \ntime: 1 minute\npath=/list.conf\nU wanna change it? type to -h")
 
     def start(self) -> int:
@@ -22,15 +28,10 @@ class Gpeg(Tk):
         super().configure(background="black")
         super().attributes("-topmost",True)
 
+        super().geometry(f"{self.size_wind_x}x{self.size_wind_y}")
 
-        screen_width = super().winfo_screenwidth()
-        screen_height = super().winfo_screenheight()
+        super().wm_geometry(f"+{int(self.setscreen_width / 2 + 480)}+{int(self.setscreen_height / 2 - 500)}")
 
-
-        super().geometry(f"{int(screen_width / 4) + 50}x{int(screen_height / 4) - 60}")
-
-        super().wm_geometry("+%d+%d" % ((int(screen_width)-415), \
-                                    int(screen_height / screen_height) + 80))
 
         return 0;
 
