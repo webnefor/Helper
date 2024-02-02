@@ -13,7 +13,7 @@ def main() -> int:
     #
     src.sortlist.init(rslt.path);
     #
-    core = src.CoreTk.Gpeg();
+    core = src.CoreTk.Gpeg(rslt.mode);
     #
     view = src.ModeLabel.ModeLabel(core, mintosec(rslt.time));
     #
