@@ -19,16 +19,18 @@ class Gpeg(Tk):
     def setup(self) -> int:
 
         super().overrideredirect(True)
-
+        super().configure(background="black")
         super().attributes("-topmost",True)
+
 
         screen_width = super().winfo_screenwidth()
         screen_height = super().winfo_screenheight()
 
+
         super().geometry(f"{int(screen_width / 4) + 50}x{int(screen_height / 4) - 60}")
 
-        super().wm_geometry("+%d+%d" % ((int(screen_width)-411), \
-                                    int(screen_height / screen_height) + 100))
+        super().wm_geometry("+%d+%d" % ((int(screen_width)-415), \
+                                    int(screen_height / screen_height) + 80))
 
         return 0;
 
