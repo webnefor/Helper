@@ -8,4 +8,3 @@ Params:
 
 <img width="553" alt="Screenshot 2024-02-02 at 17 07 16" src="https://github.com/seout/Helper/assets/113185077/7b102807-f596-4195-aa0d-899a5d30afe0">
 <img width="553" alt="Screenshot 2024-02-02 at 17 07 25" src="https://github.com/seout/Helper/assets/113185077/1caedc7d-2fbe-467a-b5f2-bd2543231cab">
-![Гифка с Gifius ru](https://github.com/seout/Helper/assets/113185077/fd402e9e-90c0-4dfb-918e-1676c89111ff)
