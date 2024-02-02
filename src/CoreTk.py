@@ -3,13 +3,13 @@ from tkinter import *
 
 class Gpeg(Tk):
 
-    def __init__(self, path:None=None):
+    def __init__(self,mode=1, path:None=None):
 
         super().__init__();
         self.path = path;
         self.setscreen_width = super().winfo_screenwidth()
         self.setscreen_height = super().winfo_screenheight()
-
+        self.mode = mode;
         self.size_wind_x = int(self.setscreen_width / 4 - 25);
         self.size_wind_y = int(self.setscreen_height / 9);
 
@@ -24,13 +24,13 @@ class Gpeg(Tk):
 
     def setup(self) -> int:
 
-        super().overrideredirect(True)
+        super().overrideredirect(self.mode)
         super().configure(background="black")
         super().attributes("-topmost",True)
 
-        super().geometry(f"{self.size_wind_x}x{self.size_wind_y}")
+        super().geometry(f"{self.size_wind_x+50}x{self.size_wind_y+50}")
 
-        super().wm_geometry(f"+{int(self.setscreen_width / 2 + 480)}+{int(self.setscreen_height / 2 - 500)}")
+        super().wm_geometry(f"+{int(0)}+{50}")
 
 
         return 0;
