@@ -18,6 +18,12 @@ def getparse(args=None):
                         help='(default: /list.conf)'
                         )
 
+    parser.add_argument('--mode',
+                        type=int,
+                        default=1,
+                        help='default: 1: (true)'
+                        )
+
     paramsopt = parser.parse_args()
 
     return paramsopt;
