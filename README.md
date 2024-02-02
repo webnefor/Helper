@@ -6,5 +6,8 @@ Params:
   --path Example: /words.conf
   --mode Example: 1 or 0
 
+  that's example:
+![work](https://github.com/seout/Helper/assets/113185077/2c77dae2-cc6b-4404-a195-a34b54efca74)
+
 <img width="553" alt="Screenshot 2024-02-02 at 17 07 16" src="https://github.com/seout/Helper/assets/113185077/7b102807-f596-4195-aa0d-899a5d30afe0">
 <img width="553" alt="Screenshot 2024-02-02 at 17 07 25" src="https://github.com/seout/Helper/assets/113185077/1caedc7d-2fbe-467a-b5f2-bd2543231cab">
