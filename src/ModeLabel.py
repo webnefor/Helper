@@ -7,8 +7,6 @@ import src.sortlist
 
 class ModeLabel(tkinter.Label):
     def __init__(self,master, msec, *args, **kwargs):
-
-
         self.msec          = msec;
         self.turnstatus    = 0;
         self.master        = master
@@ -34,17 +32,15 @@ class ModeLabel(tkinter.Label):
 
         super().place_forget()
         self.viewPronunciation.place_forget()
-        #
-        # self.viewTranslate.place(width=self.x-65, height=50,x=0, y=45);
- #.pack(padx=5, pady=10);
+
         self.viewExample.place(x=22, y=80);
-# place(x=75, y=75, width=250, height=95);
+        
         self.viewTranslate.place(x=self.x-10, y=self.y / 2)
         self.turnstatus = 1;
-        time.sleep(1)
+        time.sleep(10)
 
         self.master.withdraw()
-        time.sleep(1)
+        time.sleep(self.msec)
 
         return self.appear();
 
@@ -58,7 +54,7 @@ class ModeLabel(tkinter.Label):
             super().place(x=self.x - 10, y=self.y / 2);
             self.viewPronunciation.place(x=155, y=85);
 
-            timein = threading.Timer(1, self.update);
+            timein = threading.Timer(10, self.update);
             timein.start();
 
         else:
