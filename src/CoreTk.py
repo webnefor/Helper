@@ -17,7 +17,6 @@ class Gpeg(Tk):
 
     def start(self) -> int:
         self.setup();
-
         self.mainloop();
 
         return 0;
@@ -27,9 +26,7 @@ class Gpeg(Tk):
         super().overrideredirect(self.mode)
         super().configure(background="black")
         super().attributes("-topmost",True)
-
         super().geometry(f"{self.size_wind_x+50}x{self.size_wind_y+50}")
-
         super().wm_geometry(f"+{int(0)}+{50}")
 
 
