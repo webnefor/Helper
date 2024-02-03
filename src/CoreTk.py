@@ -4,8 +4,8 @@ from tkinter import *
 class Gpeg(Tk):
 
     def __init__(self,mode=1, path:None=None):
-
         super().__init__();
+        
         self.path = path;
         self.setscreen_width = super().winfo_screenwidth()
         self.setscreen_height = super().winfo_screenheight()

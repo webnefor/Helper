@@ -10,7 +10,7 @@ from src.args import getparse, mintosec
 
 def main() -> int:
     rslt = getparse()
-    #
+    # iampidr
     src.sortlist.init(rslt.path);
     #
     core = src.CoreTk.Gpeg(rslt.mode);
