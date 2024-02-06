@@ -54,7 +54,7 @@ class ModeLabel(tkinter.Label):
 
         self.master.deiconify()
 
-        if (self.turnstatus == 0):
+        if (not self.turnstatus): # == 0
             self.create()
 
             super().place(x=self.x - 10, y=self.y / 2);
