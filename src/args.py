@@ -1,7 +1,7 @@
 import argparse
 
-def mintosec(x):
-    return x*60
+def mintosec(x) -> int:
+    return int(x)*60;
 
 
 def getparse(args=None):
@@ -9,7 +9,7 @@ def getparse(args=None):
     parser.add_argument('--time',
                         type=int,
                         default=1,
-                        help='(default: 2)'
+                        help='(default: 1 minute)'
                         )
 
     parser.add_argument('--path',
