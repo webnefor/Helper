@@ -14,8 +14,8 @@ def getparse(args=None):
 
     parser.add_argument('--path',
                         type=str,
-                        default="/list.conf",
-                        help='(default: /list.conf)'
+                        default="/words.list",
+                        help='(default: /words.list)'
                         )
 
     parser.add_argument('--mode',
