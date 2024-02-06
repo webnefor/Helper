@@ -9,6 +9,7 @@ import src.sortlist
 from src.args import getparse, mintosec
 
 def main() -> int:
+    
     rslt = getparse()
     # 
     src.sortlist.init(rslt.path);
@@ -16,8 +17,6 @@ def main() -> int:
     core = src.CoreTk.Gpeg(rslt.mode);
     #
     view = src.ModeLabel.ModeLabel(core, mintosec(rslt.time));
-    #
-    view.create()
     #
     view.appear()
     #
