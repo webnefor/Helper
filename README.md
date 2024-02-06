@@ -7,4 +7,4 @@ Params:
   --mode Example: 1 or 0
 
   that's example:
-![work](https://github.com/seout/Helper/assets/113185077/2c77dae2-cc6b-4404-a195-a34b54efca74)
+![example](https://github.com/seout/Helper/assets/113185077/2a60e8dc-b23c-461b-b1a5-58acbb54655b)
