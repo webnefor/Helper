@@ -42,11 +42,11 @@ class ModeLabel(tkinter.Label):
         
         self.viewTranslate.place(x=self.x-10, y=self.y / 2)
         self.turnstatus = 1;
-        time.sleep(1)
+        time.sleep(8)
 
         self.master.withdraw()
-        time.sleep(1)
-        # time.sleep(self.msec)
+        
+        time.sleep(self.msec)
 
         return self.appear();
 
@@ -60,7 +60,7 @@ class ModeLabel(tkinter.Label):
             super().place(x=self.x - 10, y=self.y / 2);
             self.viewPronunciation.place(x=155, y=85);
 
-            timein = threading.Timer(1, self.update);
+            timein = threading.Timer(10, self.update);
             timein.start();
 
         else:
