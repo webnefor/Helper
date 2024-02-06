@@ -7,15 +7,20 @@ import src.sortlist
 
 class ModeLabel(tkinter.Label):
     def __init__(self,master, msec, *args, **kwargs):
-        self.msec          = msec;
-        self.turnstatus    = 0;
-        self.master        = master
 
-        self.x = int(self.master.winfo_screenmmwidth() / 4 - 25)
-        self.y = int(self.master.winfo_screenmmheight() /  9   )
+        self.msec           = msec;
+        self.turnstatus     = 0;
+
+        self.master         = master
+
+        self.len_element:int    = len(src.sortlist.GetArray);
+        self.used_element   = [];
+
+        self.x              = int(self.master.winfo_screenmmwidth() / 4 - 25)
+        self.y              = int(self.master.winfo_screenmmheight() /  9   )
 
     def create(self):
-        self.setrndm       = random.randrange(len(src.sortlist.GetArray));
+        self.setrndm       = self.GenRandom(self.len_element);
 
         super().__init__(self.master,
             text=src.sortlist.word[self.setrndm],bg="black",
@@ -37,10 +42,11 @@ class ModeLabel(tkinter.Label):
         
         self.viewTranslate.place(x=self.x-10, y=self.y / 2)
         self.turnstatus = 1;
-        time.sleep(10)
+        time.sleep(1)
 
         self.master.withdraw()
-        time.sleep(self.msec)
+        time.sleep(1)
+        # time.sleep(self.msec)
 
         return self.appear();
 
@@ -54,7 +60,7 @@ class ModeLabel(tkinter.Label):
             super().place(x=self.x - 10, y=self.y / 2);
             self.viewPronunciation.place(x=155, y=85);
 
-            timein = threading.Timer(10, self.update);
+            timein = threading.Timer(1, self.update);
             timein.start();
 
         else:
@@ -66,3 +72,18 @@ class ModeLabel(tkinter.Label):
 
             return self.appear()
 
+
+    def GenRandom(self, range_) -> int:
+        while 1:
+        # The func will generate a random num
+            x = random.randrange(range_);
+
+            if (x not in self.used_element):
+                self.used_element.append(x)
+                return x
+
+            if (len(self.used_element) >= range_):
+                self.used_element.clear()
+
+            else:
+                pass
