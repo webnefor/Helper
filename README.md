@@ -6,9 +6,16 @@ Example list.conf
 Word,[pronunce],example,translate;
 
 Params:
-  --time Example: 1
-  --path Example: /words.conf
-  --mode Example: 1 or 0
+
+  --time 
+  
+      Example: 1
+  --path 
+  
+      Example: /words.conf
+  --mode 
+  
+      Example: 1 or 0
 
   that's example:
 ![example](https://github.com/seout/Helper/assets/113185077/2a60e8dc-b23c-461b-b1a5-58acbb54655b)
