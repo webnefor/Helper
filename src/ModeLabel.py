@@ -8,19 +8,19 @@ import src.sortlist
 class ModeLabel(tkinter.Label):
     def __init__(self,master, msec, *args, **kwargs):
 
-        self.msec           = msec;
-        self.turnstatus     = 0;
+        self.msec                   = msec;
+        self.turnstatus             = 0;
 
-        self.master         = master
+        self.master                 = master
 
-        self.len_element:int    = len(src.sortlist.GetArray);
-        self.used_element   = [];
+        self.len_element:int        = len(src.sortlist.GetArray);
+        self.used_element           = [];
 
-        self.x              = int(self.master.winfo_screenmmwidth() / 4 - 25)
-        self.y              = int(self.master.winfo_screenmmheight() /  9   )
+        self.x                      = int(self.master.winfo_screenmmwidth() / 4 - 25)
+        self.y                      = int(self.master.winfo_screenmmheight() /  9   )
 
     def create(self):
-        self.setrndm       = self.GenRandom(self.len_element);
+        self.setrndm                = self.GenRandom(self.len_element);
 
         super().__init__(self.master,
             text=src.sortlist.word[self.setrndm],bg="black",
