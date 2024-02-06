@@ -11,7 +11,7 @@ Params:
       default: 1
   --path 
   
-      default: /words.conf
+      default: /words.list
   --mode 
   
       default: 1 or 0
