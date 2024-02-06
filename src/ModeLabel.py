@@ -36,12 +36,12 @@ class ModeLabel(tkinter.Label):
     def update(self):
 
         super().place_forget()
-        self.viewPronunciation.place_forget()
-
-        self.viewExample.place(x=22, y=80);
         
+        self.viewPronunciation.place_forget()
+        self.viewExample.place(x=22, y=80);
         self.viewTranslate.place(x=self.x-10, y=self.y / 2)
         self.turnstatus = 1;
+        
         time.sleep(8)
 
         self.master.withdraw()
@@ -86,4 +86,4 @@ class ModeLabel(tkinter.Label):
                 self.used_element.clear()
 
             else:
-                pass
+                continue
