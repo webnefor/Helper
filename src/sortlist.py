@@ -41,6 +41,8 @@ def spliter() -> int:
         trnslte.append(GetArray[i].split(",")[3].strip());
 
     return 0;
+
+
 def init(path=None) -> int:
 
     try:
