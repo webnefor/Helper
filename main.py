@@ -10,18 +10,17 @@ from src.args import getparse, mintosec
 
 def main() -> int:
     
-    rslt = getparse()
-    # 
-    src.sortlist.init(rslt.path);
-    #
-    core = src.CoreTk.Gpeg(rslt.mode);
-    #
-    view = src.ModeLabel.ModeLabel(core, mintosec(rslt.time));
-    #
+    rslt = getparse() # Get args 
+    
+    src.sortlist.init(rslt.path); # init();
+    
+    core = src.CoreTk.Gpeg(rslt.mode); # Create a window
+    
+    view = src.ModeLabel.ModeLabel(core, mintosec(rslt.time)); # Create label's elements
+    
     view.appear()
-    #
     core.start();
-    #
+    
 
     return 0;
 
