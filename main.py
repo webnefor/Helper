@@ -16,7 +16,7 @@ def main() -> int:
     
     core = src.CoreTk.Gpeg(rslt.mode); # Create a window
     
-    view = src.ModeLabel.ModeLabel(core, mintosec(rslt.time)); # Create label's elements
+    view = src.ModeLabel.ModeLabel(core, mintosec(rslt.time)); # Create label's element
     
     view.appear()
     core.start();
